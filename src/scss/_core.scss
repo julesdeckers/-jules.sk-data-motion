@@ -1,62 +1,55 @@
-$skaos-distance: 10px !default;
+$motion-distance: 10px !default;
 
 // Only when on screen, not in screen reader etc...
 @media screen {
     // hovers, focus, etc disabled when animating or hidden.
-    [data-skaos] {
+    [data-motion] {
         pointer-events: none;
-        &.skaos-animate {
+        &.data-motion-animate {
             pointer-events: auto;
         }
     }
 
-    // all elements that contain data-skaos="fade..."
-    // hide when init, show when class skaos-animate is added
-    [data-skaos^="fade"][data-skaos^="fade"] {
+    // all elements that contain data-motion="fade..."
+    // hide when init, show when class motion-animate is added
+    [data-motion^="fade"][data-motion^="fade"] {
         opacity: 0;
         transition-property: opacity, transform;
         transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 
-        &.skaos-animate {
+        &.data-motion-animate {
             opacity: 1;
             transform: none;
         }
     }
 
     // transform for FLIP, animation for animation
-    [data-skaos="fade-up"] {
-        transform: translate3d(0, $skaos-distance, 0);
-        &.skaos-animate {
-            animation: skappear 0.5s ease;
+    [data-motion="fade-up"] {
+        transform: translate3d(0, $motion-distance, 0);
+        &.data-motion-animate {
+            animation: data-motion-fade-up 0.5s ease;
         }
     }
 
     // Generate Duration && Delay
-    [data-skaos] {
+    [data-motion] {
         @for $i from 1 through 60 {
-            [data-skaos-duration="#{$i * 50}"] &,
-            &[data-skaos][data-skaos-duration="#{$i * 50}"] {
+            [data-motion-duration="#{$i * 50}"] &,
+            &[data-motion][data-motion-duration="#{$i * 50}"] {
                 transition-duration: #{$i * 50}ms;
                 animation-duration: #{$i * 50}ms;
             }
 
-            [data-skaos-delay="#{$i * 50}"] &,
-            &[data-skaos][data-skaos-delay="#{$i * 50}"] {
+            [data-motion-delay="#{$i * 50}"] &,
+            &[data-motion][data-motion-delay="#{$i * 50}"] {
                 transition-delay: 0s;
                 animation-delay: 0s;
 
-                &.skaos-animate {
+                &.data-motion-animate {
                     transition-delay: #{$i * 50}ms;
                     animation-delay: #{$i * 50}ms;
                 }
             }
         }
-    }
-}
-
-@keyframes skappear {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
     }
 }
