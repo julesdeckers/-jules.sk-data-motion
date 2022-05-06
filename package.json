@@ -6,6 +6,7 @@
     "browser": "dist/data-motion.js",
     "author": "Jules Superkraft <jules@superkraft.be>",
     "license": "MIT",
+    "description": "Library port of AOS",
     "repository": {
         "type": "git",
         "url": "https://github.com/julesdeckers/-jules.sk-data-motion"
