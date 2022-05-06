@@ -31,6 +31,15 @@ $motion-distance: 10px !default;
         }
     }
 
+    // transform for FLIP, animation for animation
+    [data-motion="fade-down"] {
+        transform: translate3d(0, -$motion-distance, 0);
+        &.data-motion-animate {
+            animation: data-motion-fade-down 0.5s ease;
+        }
+    }
+
+
     // Generate Duration && Delay
     [data-motion] {
         @for $i from 1 through 60 {

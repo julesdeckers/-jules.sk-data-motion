@@ -4,3 +4,10 @@
         transform: translateY(10px);
     }
 }
+
+@keyframes data-motion-fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
