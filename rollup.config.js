@@ -31,12 +31,11 @@ export default [
                 babelHelpers: 'runtime',
                 exclude: ['node_modules/**']
             }),
-            uglify()
+            // uglify()
         ]
     },
     {
         input,
-        external: Object.keys(pkg.dependencies),
         output: [
             { file: pkg.main, format: 'cjs' },
             { file: pkg.module, format: 'es' }
@@ -48,7 +47,7 @@ export default [
                 babelHelpers: 'runtime',
                 exclude: ['node_modules/**']
             }),
-            uglify()
+            // uglify()
         ]
     }
 ];

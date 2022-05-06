@@ -7,10 +7,8 @@
  * ***********************************************************
  */
 import styles from './../scss/data-motion.scss';
-import throttle from 'lodash.throttle';
 
 let _settings = {
-    throttleDelay: 99,
     offset: 100,
 }
 
@@ -36,7 +34,6 @@ let options = {
  * @param {*} observer 
  */
 const onIntersection = (entries, observer) => {
-    throttle(() => {
         for (const { isIntersecting, target } of entries) {
             if (isIntersecting) {
                 setTimeout(() => {
@@ -45,7 +42,6 @@ const onIntersection = (entries, observer) => {
                 observer.unobserve(target);
             }
         }
-    }, _settings.throttleDelay)
 };
 
 const init = function init(settings) {
