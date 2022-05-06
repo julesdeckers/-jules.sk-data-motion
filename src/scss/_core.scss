@@ -23,6 +23,7 @@ $motion-distance: 10px !default;
         }
     }
 
+    // fade-up
     // transform for FLIP, animation for animation
     [data-motion="fade-up"] {
         transform: translate3d(0, $motion-distance, 0);
@@ -31,6 +32,7 @@ $motion-distance: 10px !default;
         }
     }
 
+    // fade-down
     // transform for FLIP, animation for animation
     [data-motion="fade-down"] {
         transform: translate3d(0, -$motion-distance, 0);
