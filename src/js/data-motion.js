@@ -8,7 +8,6 @@
  */
 import styles from './../scss/data-motion.scss';
 import throttle from 'lodash.throttle';
-import { getObservableElements } from './lib/getObservableElements';
 
 let _settings = {
     throttleDelay: 99,
@@ -22,7 +21,7 @@ let $observableElements = [];
  * threshold at 1.0 means callback is invoked when 100% of target is visible ~ origin
  * rootMargin: -100px until callback
  */
-const options = {
+let options = {
     root: null,
     rootMargin: '-100px 0px',
     threshold: [0]
@@ -53,7 +52,7 @@ const init = function init(settings) {
     _settings = Object.assign(_settings, settings);
     options.rootMargin = `-${_settings.offset}px 0px`;
 
-    $observableElements = getObservableElements();
+    $observableElements = document.querySelectorAll('[data-motion]');
     $observableElements.forEach(element => {
         const observer = new IntersectionObserver(onIntersection, options);
         observer.observe(element);

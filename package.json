@@ -1,6 +1,6 @@
 {
     "name": "@jules.sk/data-motion",
-    "version": "0.1.5",
+    "version": "0.1.7",
     "main": "dist/data-motion.cjs.js",
     "module": "dist/data-motion.esm.js",
     "browser": "dist/data-motion.js",
