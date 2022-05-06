@@ -1,4 +1,45 @@
 {
     "name": "@jules.sk/data-motion",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "main": "dist/data-motion.cjs.js",
+    "module": "dist/data-motion.esm.js",
+    "browser": "dist/data-motion.js",
+    "author": "Jules Superkraft <jules@superkraft.be>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/julesdeckers/-jules.sk-data-motion"
+    },
+    "scripts": {
+        "publish": "npm publish --access=public",
+        "build": "NODE_ENV=production rollup -c",
+        "watch": "NODE_ENV=dev rollup -c -w"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.10",
+        "@babel/eslint-parser": "^7.17.0",
+        "@babel/plugin-external-helpers": "^7.16.7",
+        "@babel/plugin-transform-object-assign": "^7.16.7",
+        "@babel/preset-env": "^7.17.10",
+        "@rollup/plugin-babel": "^5.3.1",
+        "@rollup/plugin-commonjs": "^22.0.0",
+        "@rollup/plugin-node-resolve": "^13.3.0",
+        "autoprefixer": "^10.4.7",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.5",
+        "cssnano": "^5.1.7",
+        "eslint": "^8.14.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "node-sass": "^7.0.1",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.13",
+        "rollup": "^2.72.0",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-uglify": "^6.0.4"
+    },
+    "files": [
+        "dist",
+        "src"
+    ]
 }
