@@ -28,10 +28,10 @@ export default [
             nodeResolve(),
             commonjs(),
             babel({
-                babelHelpers: 'runtime',
+                babelHelpers: 'bundled',
                 exclude: ['node_modules/**']
             }),
-            // uglify()
+            uglify()
         ]
     },
     {
@@ -44,10 +44,10 @@ export default [
             transformStyles,
             nodeResolve(),
             babel({
-                babelHelpers: 'runtime',
+                babelHelpers: 'bundled',
                 exclude: ['node_modules/**']
             }),
-            // uglify()
+            uglify()
         ]
     }
 ];
