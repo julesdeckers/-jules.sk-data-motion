@@ -28,7 +28,7 @@ export default [
             nodeResolve(),
             commonjs(),
             babel({
-                babelHelpers: 'external',
+                babelHelpers: 'runtime',
                 exclude: ['node_modules/**']
             }),
             uglify()
@@ -43,8 +43,9 @@ export default [
         ],
         plugins: [
             transformStyles,
+            nodeResolve(),
             babel({
-                babelHelpers: 'external',
+                babelHelpers: 'runtime',
                 exclude: ['node_modules/**']
             }),
             uglify()

@@ -1,6 +1,6 @@
 {
     "name": "@jules.sk/data-motion",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "main": "dist/data-motion.cjs.js",
     "module": "dist/data-motion.esm.js",
     "browser": "dist/data-motion.js",
@@ -19,8 +19,8 @@
     "devDependencies": {
         "@babel/core": "^7.17.10",
         "@babel/eslint-parser": "^7.17.0",
-        "@babel/plugin-external-helpers": "^7.16.7",
         "@babel/plugin-transform-object-assign": "^7.16.7",
+        "@babel/plugin-transform-runtime": "^7.17.10",
         "@babel/preset-env": "^7.17.10",
         "@rollup/plugin-babel": "^5.3.1",
         "@rollup/plugin-commonjs": "^22.0.0",
@@ -44,6 +44,7 @@
         "src"
     ],
     "dependencies": {
+        "@babel/runtime": "^7.17.9",
         "lodash.throttle": "^4.1.1"
     }
 }

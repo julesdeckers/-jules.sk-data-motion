@@ -8,7 +8,7 @@
  */
 import styles from './../scss/data-motion.scss';
 import throttle from 'lodash.throttle';
-import getObservableElements from './lib/getObservableElements';
+import { getObservableElements } from './lib/getObservableElements';
 
 let _settings = {
     throttleDelay: 99,
@@ -60,6 +60,6 @@ const init = function init(settings) {
     })
 }
 
-export default {
+export {
     init
 }
