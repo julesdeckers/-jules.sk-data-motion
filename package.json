@@ -1,6 +1,6 @@
 {
     "name": "@jules.sk/data-motion",
-    "version": "0.2.2",
+    "version": "0.2.8",
     "main": "dist/data-motion.cjs.js",
     "module": "dist/data-motion.esm.js",
     "browser": "dist/data-motion.js",
@@ -12,7 +12,6 @@
         "url": "https://github.com/julesdeckers/-jules.sk-data-motion"
     },
     "scripts": {
-        "publish": "npm publish --access=public",
         "build": "NODE_ENV=production rollup -c",
         "watch": "NODE_ENV=dev rollup -c -w"
     },

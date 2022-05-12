@@ -11,7 +11,7 @@ $motion-distance: 10px !default;
     }
 
     // all elements that contain data-motion="fade..."
-    // hide when init, show when class motion-animate is added
+    // hide when init, show when class motion-axnimate is added
     [data-motion^="fade"][data-motion^="fade"] {
         opacity: 0;
         transition-property: opacity, transform;
